@@ -246,7 +246,7 @@ Workflow: `/Users/steve/git/personal/ssc-kotlin-poc/.github/workflows/android.ym
 
 Jobs:
 - `unit-and-static`: `assembleDemoDebug` + `lintDemoDebug` + `testDebugUnitTest` + `testDemoDebugUnitTest`
-- `android-instrumented`: API 34 emulator + `connectedDebugAndroidTest` (`core:database`) and `connectedDemoDebugAndroidTest` (`app`)
+- `android-instrumented`: Ubuntu runner + API 34 `x86_64` emulator + `connectedDebugAndroidTest` (`core:database`) and `connectedDemoDebugAndroidTest` (`app`)
 - both jobs upload test/lint artifacts
 
 
