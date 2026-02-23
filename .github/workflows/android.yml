@@ -52,7 +52,7 @@ jobs:
           api-level: 34
           arch: x86_64
           target: google_apis
-          profile: pixel_8
+          profile: pixel
           disable-animations: true
           script: ./gradlew :core:database:connectedDebugAndroidTest :app:connectedDemoDebugAndroidTest
       - name: Upload instrumentation reports
