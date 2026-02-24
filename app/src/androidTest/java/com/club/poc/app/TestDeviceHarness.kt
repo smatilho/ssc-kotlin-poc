@@ -12,8 +12,10 @@ internal object TestDeviceHarness {
         wakeAndUnlock(device)
         device.pressHome()
         device.waitForIdle()
-        device.executeShellCommand("am force-stop $AppPackage")
-        device.executeShellCommand("pm clear $AppPackage")
+        // Do not force-stop/clear the target package here.
+        // These tests run inside instrumentation for the same target app process and can
+        // terminate the instrumentation process itself. Orchestrator + clearPackageData
+        // handles per-test state isolation.
         device.executeShellCommand("am start -W -n $MainActivityComponent")
 
         check(device.wait(Until.hasObject(By.pkg(AppPackage)), 15_000)) {
