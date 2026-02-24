@@ -23,6 +23,7 @@ androidx-test-ext = "1.2.1"
 espresso = "3.6.1"
 uiautomator = "2.3.0"
 runner = "1.6.2"
+orchestrator = "1.5.1"
 
 [libraries]
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
@@ -64,6 +65,7 @@ androidx-test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "a
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "runner" }
 androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
 androidx-test-uiautomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "uiautomator" }
+androidx-test-orchestrator = { module = "androidx.test:orchestrator", version.ref = "orchestrator" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
